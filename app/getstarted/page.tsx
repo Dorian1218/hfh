@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useAuth } from "@/context/AuthContext"
 import { Input } from '@/components/ui/input'
 import {
@@ -18,8 +18,11 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import { Button } from '@/components/ui/button'
 
 export default function page() {
+    const [firstName, setFirstName] = useState('')
+    const [LastName, setLastName] = useState('')
     const { user } = useAuth()
     return (
         <div className='p-5 flex flex-col items-center justify-center h-screen'>
@@ -33,15 +36,16 @@ export default function page() {
                         <Input placeholder="Last Name" className="mb-2" />
                     </div>
                     <Select>
-                            <SelectTrigger>
-                                <SelectValue placeholder="Level of Education" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="Secondary/Highschool">Secondary/Highschool</SelectItem>
-                                <SelectItem value="Undergraduate">Undergraduate</SelectItem>
-                                <SelectItem value="Graduate">Graduate</SelectItem>
-                            </SelectContent>
-                        </Select>
+                        <SelectTrigger>
+                            <SelectValue placeholder="Level of Education" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="Secondary/Highschool">Secondary/Highschool</SelectItem>
+                            <SelectItem value="Undergraduate">Undergraduate</SelectItem>
+                            <SelectItem value="Graduate">Graduate</SelectItem>
+                        </SelectContent>
+                    </Select>
+                    <Button className='w-full mt-2'>Continue</Button>
                 </CardContent>
             </Card>
         </div>
