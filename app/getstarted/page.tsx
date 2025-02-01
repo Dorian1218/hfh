@@ -25,7 +25,7 @@ export default function page() {
     const [LastName, setLastName] = useState('')
     const { user } = useAuth()
     return (
-        <div className='p-5 flex flex-col items-center justify-center h-screen'>
+        <div className='p-5 flex flex-col items-center justify-center h-screen w-screen'>
             <Card className="w-1/3">
                 <CardHeader>
                     <CardTitle className="text-2xl">Let's get started</CardTitle>
