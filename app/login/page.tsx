@@ -26,8 +26,7 @@ export default function page() {
         })
     }
     return (
-        <div className="flex flex-col items-center justify-center h-screen py-2">
-            {user && <div>{user.email}</div>}
+        <div className="flex flex-col items-center justify-center h-screen py-2 w-screen">
             <Card className="w-1/3">
                 <CardHeader>
                     <CardTitle className="text-2xl">Login</CardTitle>

@@ -34,7 +34,6 @@ export default function page() {
     }
     return (
         <div className="flex flex-col items-center justify-center h-screen py-2 w-screen">
-            {user && <div>{user.email}</div>}
             <Card className="w-1/3">
                 <CardHeader>
                     <CardTitle className="text-2xl">Signup</CardTitle>
@@ -46,7 +45,6 @@ export default function page() {
                     <Button className="w-full bg-blue-600 hover:bg-blue-800" onClick={handleSignUp}>Signup</Button>
                 </CardContent>
             </Card>
-            <Button onClick={() => logout}>Logout</Button>
         </div>
     )
 }

@@ -21,7 +21,7 @@ export function AppSidebar() {
     const {user} = useAuth()
     return (
         <Sidebar>
-            <SidebarContent>
+            <SidebarContent className="border-black border-r-1">
                 <SidebarGroup>
                     <SidebarGroupLabel>Subjects</SidebarGroupLabel>
                     <SidebarGroupContent>
